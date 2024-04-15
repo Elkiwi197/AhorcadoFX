@@ -3,7 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="480" prefWidth="600" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControladorPantallaLandingPage">
-    <Button id="botonJugar" fx:id="botonJugar" layoutX="145.0" layoutY="187.0" mnemonicParsing="false" text="Jugar" />
-    <Button id="botonGestionar" fx:id="botonGestionar" layoutX="349.0" layoutY="199.0" mnemonicParsing="false" text="Gestionar" />
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControladorLandingPage">
+    <Button id="botonJugar" fx:id="botonJugar" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" onAction="#cargarJugar" prefHeight="45.0" prefWidth="149.0" text="Jugar" />
+    <Button id="botonGestionar" fx:id="botonGestionar" layoutX="358.0" layoutY="167.0" mnemonicParsing="false" onAction="#cargarGestionar" prefHeight="45.0" prefWidth="149.0" text="Gestionar" />
+   <Label id="labelIntroduceContrasena" fx:id="labelIntroduceContrasena" layoutX="419.0" layoutY="257.0" text="Label" />
+   <PasswordField id="inputContrasena" fx:id="inputContrasena" layoutX="359.0" layoutY="224.0" />
 </AnchorPane>
