@@ -20,5 +20,6 @@ public class ControladorLandingPage {
     }
 
     public void cargarGestionar(ActionEvent actionEvent) {
+        borderPane.cargarPantallaGestion();
     }
 }

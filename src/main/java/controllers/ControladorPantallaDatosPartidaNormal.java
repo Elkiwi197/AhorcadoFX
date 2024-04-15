@@ -1,18 +1,20 @@
 package controllers;
 
+import domain.Palabra;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 
-public class ControladorPantallaJugar {
+public class ControladorPantallaDatosPartidaNormal {
     private ControladorPrincipal borderPane;
-    public Label labelIncognita;
-    public Label labelVidas;
-    public Label labelLetrasUsadas;
-    public Label labelCategoria;
+    public ChoiceBox<String> choiceDificultad;
+    public ChoiceBox<String> choiceCategoria;
+    public Button botonJugar;
     public Label labelDificultad;
-    public Button botonSalir;
-    public Button botonGuardarSalir;
+    public Label labelCategoria;
+    public Button buttonVolver;
 
     public void setBorderPane(ControladorPrincipal controladorPrincipal) {
         borderPane = controladorPrincipal;
@@ -22,6 +24,7 @@ public class ControladorPantallaJugar {
         borderPane.cargarPantallaMenuJugar();
     }
 
-    public void guardarYsalir(ActionEvent actionEvent) {
+    public void jugarPartidaNormal(ActionEvent actionEvent) {
+        borderPane.cargarJugar();
     }
 }

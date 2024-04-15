@@ -76,6 +76,9 @@ public class DAOpalabras {
 
                 // (OPCIONAL) METER PALABRAS CON JAVA FAKER
 
+                //NO FUNCIONA
+                /*
+
                 for (int i = 0; i < 10; i++) {
                     String valor;
                     String genero = Generos.Series.toString();
@@ -128,6 +131,7 @@ public class DAOpalabras {
                     } while (!unico);
                     diccionario.add(new Palabra(valor, dificultad, genero));
                 }
+
                 for (int i = 0; i < 50; i++) {
                     String valor;
                     String genero = Generos.Geografía.toString();
@@ -151,6 +155,7 @@ public class DAOpalabras {
                         diccionario.remove(palabraEliminar);
                     }
                 }
+                 */
 
                 ordenarDiccionario();
                 sobreescribirFichero();

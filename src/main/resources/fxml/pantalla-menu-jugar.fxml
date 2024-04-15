@@ -3,11 +3,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControladorPantallaMenuJugar">
    <children>
-      <Button id="botonPartidaRapida" fx:id="botonPartidaRapida" layoutX="274.0" layoutY="175.0" mnemonicParsing="false" text="Partida Rápida" />
-      <Button id="botonCargarPartida" fx:id="botonCargarPartida" layoutX="106.0" layoutY="175.0" mnemonicParsing="false" text="Cargar Partida" />
-      <Button id="botonPartidaNormal" fx:id="botonPartidaNormal" layoutX="405.0" layoutY="175.0" mnemonicParsing="false" text="Partida Normal" />
+      <Button id="botonPartidaRapida" fx:id="botonPartidaRapida" layoutX="274.0" layoutY="175.0" mnemonicParsing="false" onAction="#jugarPartidaRapida" text="Partida Rápida" />
+      <Button id="botonCargarPartida" fx:id="botonCargarPartida" layoutX="106.0" layoutY="175.0" mnemonicParsing="false" onAction="#jugarCargarPartida" text="Cargar Partida" />
+      <Button id="botonPartidaNormal" fx:id="botonPartidaNormal" layoutX="405.0" layoutY="175.0" mnemonicParsing="false" onAction="#pedirDatosPartida" text="Partida Normal" />
+      <Button id="botonVolver" fx:id="botonVolver" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#volverLandingPage" text="Volver" />
    </children>
 </AnchorPane>

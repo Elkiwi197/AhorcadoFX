@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControladorPantallaDatosPartidaNormal">
+   <children>
+      <ChoiceBox id="choiceDificultad" fx:id="choiceDificultad" layoutX="90.0" layoutY="187.0" prefHeight="25.0" prefWidth="85.0" />
+      <ChoiceBox id="choiceCategoria" fx:id="choiceCategoria" layoutX="357.0" layoutY="187.0" prefWidth="150.0" />
+      <Button id="botonJugar" fx:id="botonJugar" layoutX="206.0" layoutY="268.0" mnemonicParsing="false" onAction="#jugarPartidaNormal" prefHeight="77.0" prefWidth="113.0" text="Jugar" />
+      <Label id="labelDificultad" fx:id="labelDificultad" layoutX="105.0" layoutY="124.0" text="Elige la dificultad" />
+      <Label id="labelCategoria" fx:id="labelCategoria" layoutX="418.0" layoutY="133.0" text="Elige la categoría" />
+      <Button id="buttonVolver" fx:id="buttonVolver" layoutX="14.0" layoutY="320.0" mnemonicParsing="false" onAction="#volverMenuJugar" text="Volver" />
+   </children>
+</AnchorPane>

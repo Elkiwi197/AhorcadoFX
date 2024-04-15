@@ -1,0 +1,27 @@
+1|CALL OF DUTY|Videojuegos
+1|FIFA|Videojuegos
+4|FUERA DE JUEGO|Deportes
+1|GTA V|Videojuegos
+3|HEISENBERG|Series
+1|HERMIONE GRANGER|Películas
+1|HOLA|Otros
+1|HOMER|Series
+1|LABORATORIO|Ciencia
+2|MEN IN BLACK|Películas
+1|MESA|Otros
+1|MESSI|Deportes
+2|NEPAL|Geografía
+2|NEWTON|Ciencia
+1|OASIS|Geografía
+4|OHMIO|Ciencia
+1|PIANO|Música
+4|POLLO|Otros
+1|PROBETA|Ciencia
+2|RADIACION|Ciencia
+1|RAFA NADAL|Deportes
+1|RED DEAD REDEMPTION|Videojuegos
+3|SANTA MARIA|Historia
+1|THE BEATLES|Música
+1|THE ROLLING STONES|Música
+5|TOMBOLO|Geografía
+4|TRAFALGAR|Historia
