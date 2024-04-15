@@ -3,6 +3,7 @@ package ui;
 import common.Comprobaciones;
 import common.Generos;
 import common.InputInvalidoException;
+import domain.Juego;
 import domain.Palabra;
 import service.ServicePalabras;
 
