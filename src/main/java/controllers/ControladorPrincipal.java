@@ -63,6 +63,7 @@ public class ControladorPrincipal implements Initializable {
                 controladorLandingPage = loaderLandingPage.getController();
                 controladorLandingPage.setBorderPane(this);
             }
+            controladorLandingPage.labelIntroduceContrasena.setText("");
             pantallaPrincipal.setCenter(landingPageAnchorPane);
         } catch (IOException e) {
             System.out.println("ERROR CARGANDO LANDING PAGE");

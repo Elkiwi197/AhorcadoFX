@@ -20,6 +20,11 @@ public class ControladorLandingPage {
     }
 
     public void cargarGestionar(ActionEvent actionEvent) {
-        borderPane.cargarPantallaGestion();
+        String contrasena = inputContrasena.getText();
+        if (contrasena.equals("vaca")){
+            borderPane.cargarPantallaGestion();
+        } else {
+            labelIntroduceContrasena.setText("Introduce una contraseña \n correcta");
+        }
     }
 }
