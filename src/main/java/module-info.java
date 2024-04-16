@@ -5,6 +5,7 @@ module org.example.ahorcadofx {
 
 
     opens controllers to javafx.fxml;
+    opens domain to javafx.base;
     exports ui;
     opens ui to javafx.fxml;
     exports controllers;

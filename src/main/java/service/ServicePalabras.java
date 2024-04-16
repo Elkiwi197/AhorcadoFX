@@ -30,6 +30,13 @@ public class ServicePalabras  {
         return daopalabras.listarPalabras2();
     }
 
+    public ArrayList<String> devolverDiccionarioRAMstring(){
+        return daopalabras.devolverDiccionarioRAMstring();
+    }
+    public ArrayList<Palabra> devolverDiccionarioRAMpalabra(){
+        return daopalabras.devolverDiccionarioRAMpalabra();
+    }
+
     public boolean eliminarPalabra(String palabraEliminar) {
         return daopalabras.eliminarPalabra(palabraEliminar);
     }

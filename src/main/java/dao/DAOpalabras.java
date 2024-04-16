@@ -328,6 +328,20 @@ public class DAOpalabras {
         return null;
     }
 
+
+    public ArrayList<String> devolverDiccionarioRAMstring(){
+        ArrayList<String> diccionarioDevolver = new ArrayList<>();
+        for (Palabra palabra: diccionario) {
+            diccionarioDevolver.add(palabra.toString());
+        }
+        return diccionarioDevolver;
+    }
+
+    public ArrayList<Palabra> devolverDiccionarioRAMpalabra(){
+        return (ArrayList<Palabra>) diccionario;
+
+    }
+
     public boolean modificarPalabra(String palabraModificar, int campo, String valor) {
         Palabra palabra = new Palabra();
         boolean flag = false;

@@ -1,5 +1,6 @@
 package controllers;
 
+import domain.Palabra;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -9,6 +10,7 @@ import service.ServicePalabras;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class ControladorPrincipal implements Initializable {
@@ -47,6 +49,9 @@ public class ControladorPrincipal implements Initializable {
     // CLASES Y OBJETOS DE LA LOGICA
     private ServicePalabras servicePalabras = new ServicePalabras();
 
+
+
+
     public ControladorPrincipal() {
     }
 
@@ -84,6 +89,8 @@ public class ControladorPrincipal implements Initializable {
     }
 
     public void cargarPantallaGestion() {
+        ArrayList<String> diccionarioString = servicePalabras.devolverDiccionarioRAMstring();
+        ArrayList<Palabra> diccionarioPalabra = servicePalabras.devolverDiccionarioRAMpalabra();
         try {
             if (pantallaGestionAnchorPane == null) {
                 pantallaGestionAnchorPane = loaderPantallaGestion.load(getClass().getResourceAsStream("/fxml/pantalla-gestion.fxml"));
@@ -91,6 +98,8 @@ public class ControladorPrincipal implements Initializable {
                 controladorPantallaGestion.setBorderPane(this);
             }
             pantallaPrincipal.setCenter(pantallaGestionAnchorPane);
+            controladorPantallaGestion.mostrarDiccionarioListView(diccionarioString);
+            controladorPantallaGestion.mostrarDiccionarioTableView(diccionarioPalabra);
         } catch (IOException e) {
             System.out.println("ERROR CARGANDO GESTION");
         }
