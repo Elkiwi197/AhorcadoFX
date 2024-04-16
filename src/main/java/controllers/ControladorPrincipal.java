@@ -100,6 +100,7 @@ public class ControladorPrincipal implements Initializable {
             pantallaPrincipal.setCenter(pantallaGestionAnchorPane);
             controladorPantallaGestion.mostrarDiccionarioListView(diccionarioString);
             controladorPantallaGestion.mostrarDiccionarioTableView(diccionarioPalabra);
+            controladorPantallaGestion.ocultarCampos();
         } catch (IOException e) {
             System.out.println("ERROR CARGANDO GESTION");
         }
@@ -129,5 +130,26 @@ public class ControladorPrincipal implements Initializable {
         } catch (IOException e) {
             System.out.println("ERROR CARGANDO PEDIR DATOS");
         }
+    }
+
+    public void eliminarPalabra(String palabra){
+        servicePalabras.eliminarPalabra(palabra);
+        controladorPantallaGestion.mostrarDiccionarioTableView(servicePalabras.devolverDiccionarioRAMpalabra());
+    }
+
+    public void modificarPalabra(String palabraAntigua, String palabraNueva, int dificultad, String categoria){
+        servicePalabras.modificarPalabra(palabraAntigua, palabraNueva, dificultad, categoria);
+        controladorPantallaGestion.mostrarDiccionarioTableView(servicePalabras.devolverDiccionarioRAMpalabra());
+
+    }
+
+    public void anadirPalabra(Palabra palabra) {
+        try {
+            servicePalabras.anadirPalabra(palabra);
+            controladorPantallaGestion.mostrarDiccionarioTableView(servicePalabras.devolverDiccionarioRAMpalabra());
+        } catch (IOException e) {
+            System.out.println("No se pudo añadir la palabra");
+        }
+
     }
 }

@@ -6,21 +6,22 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControladorPantallaGestion">
     <ListView id="listaPalabras" fx:id="listaPalabras" layoutY="44.0" prefHeight="97.0" prefWidth="62.0" />
     <Button id="botonVolver" fx:id="botonVolver" layoutX="14.0" layoutY="355.0" mnemonicParsing="false" onAction="#volverMenuPrincipal" text="Volver" />
-    <Button id="botonEliminar" fx:id="botonEliminar" layoutX="439.0" layoutY="30.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="Eliminar Palabra" />
+    <Button id="botonEliminar" fx:id="botonEliminar" layoutX="439.0" layoutY="30.0" mnemonicParsing="false" onAction="#eliminarPalabra" prefHeight="25.0" prefWidth="109.0" text="Eliminar Palabra" />
     <ChoiceBox fx:id="choiceDificultad" layoutX="409.0" layoutY="218.0" prefHeight="25.0" prefWidth="39.0" />
-    <Button id="botonModificar" fx:id="botonModificar" layoutX="439.0" layoutY="80.0" mnemonicParsing="false" text="Modificar Palabra" />
-    <Button id="botonAnadir" fx:id="botonAnadir" layoutX="439.0" layoutY="129.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="Añadir Palabra" />
+    <Button id="botonModificar" fx:id="botonModificar" layoutX="439.0" layoutY="80.0" mnemonicParsing="false" onAction="#modificarPalabra" text="Modificar Palabra" />
+    <Button id="botonAnadir" fx:id="botonAnadir" layoutX="439.0" layoutY="129.0" mnemonicParsing="false" onAction="#anadirPalabra" prefHeight="25.0" prefWidth="109.0" text="Añadir Palabra" />
     <ChoiceBox fx:id="choiceCategoria" layoutX="475.0" layoutY="218.0" prefHeight="25.0" prefWidth="109.0" />
     <TextField id="inputPalabra" fx:id="inputPalabra" layoutX="415.0" layoutY="294.0" />
     <Label id="labelDificultad" fx:id="labelDificultad" layoutX="403.0" layoutY="188.0" text="Dificultad" />
     <Label id="labelCategoria" fx:id="labelCategoria" layoutX="504.0" layoutY="188.0" text="Categoría" />
     <Label id="labelPalabra" fx:id="labelPalabra" layoutX="470.0" layoutY="270.0" text="Palabra" />
-    <Button id="inputPalabra" fx:id="botonAceptar" layoutX="402.0" layoutY="329.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="185.0" text="Aceptar" />
-   <TableView id="tabla" fx:id="tabla" layoutX="12.0" layoutY="21.0" prefHeight="300.0" prefWidth="350.0">
+    <Button id="botonSubmitAnadir" fx:id="botonSubmitAnadir" layoutX="402.0" layoutY="329.0" mnemonicParsing="false" onAction="#submitAnadirPalabra" prefHeight="45.0" prefWidth="185.0" text="Añadir" />
+   <TableView id="tabla" fx:id="tablaPalabras" layoutX="12.0" layoutY="21.0" prefHeight="300.0" prefWidth="370.0">
      <columns>
        <TableColumn id="columnaDificultad" fx:id="columnaDificultad" prefWidth="60.0" text="Dificultad" />
        <TableColumn id="columnaPalabra" fx:id="columnaPalabra" minWidth="75.0" prefWidth="190.0" text="Palabra" />
          <TableColumn id="columnaCategoria" fx:id="columnaCategoria" prefWidth="100.0" text="Categoría" />
      </columns>
    </TableView>
+   <Button id="botonSubmitModificar" fx:id="botonSubmitModificar" layoutX="403.0" layoutY="329.0" mnemonicParsing="false" onAction="#submitModificarPalabra" prefHeight="45.0" prefWidth="185.0" text="Modificar" />
 </AnchorPane>

@@ -355,7 +355,7 @@ public class Juego {
                     campo = scanner.nextInt();
                     if (campo >= 1 && campo <= 3) {
                         valor = LlamadasUsuario.modificarPalabra(campo);
-                        if (servicePalabras.modificarPalabra(palabraModificar, campo, valor)) {
+                        if (servicePalabras.modificarPalabra(palabraModificar, "a", campo, valor)) {
                             Mensajes.palabraModificada();
                         } else {
                             Mensajes.errorModificandoPalabra();

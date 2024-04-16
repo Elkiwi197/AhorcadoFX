@@ -41,8 +41,8 @@ public class ServicePalabras  {
         return daopalabras.eliminarPalabra(palabraEliminar);
     }
 
-    public boolean modificarPalabra(String palabraModificar, int campo, String valor) {
-        return daopalabras.modificarPalabra(palabraModificar, campo, valor);
+    public boolean modificarPalabra(String palabraVieja, String palabraNueva, int dificultad, String categoria) {
+        return daopalabras.modificarPalabra(palabraVieja, palabraNueva, dificultad, categoria);
     }
 
     public Palabra devolverPalabra(String palabraDevolver) {

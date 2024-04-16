@@ -342,61 +342,24 @@ public class DAOpalabras {
 
     }
 
-    public boolean modificarPalabra(String palabraModificar, int campo, String valor) {
-        Palabra palabra = new Palabra();
+    public boolean modificarPalabra(String palabraVieja, String palabraNueva, int dificultad, String categoria) {
         boolean flag = false;
+        int index = 0;
 
-        for (Palabra palabraDiccionario : diccionario) {
-            if (palabraDiccionario.getValor().equals(palabraModificar)) {
-                palabra = palabraDiccionario;
+        for (Palabra palabra: diccionario) {
+            if (palabra.getValor().equals(palabraVieja)){
+                index = diccionario.indexOf(palabra);
             }
         }
-        switch (campo) {
-            case 1:
-                palabra.setDificultad(Integer.parseInt(valor));
-                flag = true;
-                break;
-            case 2:
-                palabra.setValor(valor);
-                flag = true;
-                break;
-            case 3:
-                switch (Integer.parseInt(valor)) {
-                    case 1:
-                        palabra.setGenero(String.valueOf(Generos.Series));
-                        break;
-                    case 2:
-                        palabra.setGenero(String.valueOf(Generos.Películas));
-                        break;
-                    case 3:
-                        palabra.setGenero(String.valueOf(Generos.Videojuegos));
-                        break;
-                    case 4:
-                        palabra.setGenero(String.valueOf(Generos.Música));
-                        break;
-                    case 5:
-                        palabra.setGenero(String.valueOf(Generos.Deportes));
-                        break;
-                    case 6:
-                        palabra.setGenero(String.valueOf(Generos.Ciencia));
-                        break;
-                    case 7:
-                        palabra.setGenero(String.valueOf(Generos.Historia));
-                        break;
-                    case 8:
-                        palabra.setGenero(String.valueOf(Generos.Geografía));
-                        break;
-                    case 9:
-                        palabra.setGenero(String.valueOf(Generos.Otros));
-                        break;
-                    default:
-                }
-                flag = true;
-                break;
-            default:
-        }
+
+        diccionario.get(index).setDificultad(dificultad);
+        diccionario.get(index).setGenero(categoria);
+        diccionario.get(index).setValor(palabraNueva);
+        flag = true;
+
         ordenarDiccionario();
         sobreescribirFichero();
+
         return flag;
     }
 
