@@ -1,10 +1,9 @@
 1|HERMIONE GRANGER|Películas
-1|HOLA|Otros
-1|HOMER|Series
 1|MESA|Otros
 2|NEWTON|Ciencia
 1|OASIS|Geografía
 4|OHMIO|Ciencia
+2|PELOTO|Música
 1|PIANO|Música
 4|POLLO|Otros
 1|PROBETA|Ciencia

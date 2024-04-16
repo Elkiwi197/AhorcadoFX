@@ -1,5 +1,6 @@
 package controllers;
 
+import domain.Juego;
 import domain.Palabra;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -48,6 +49,7 @@ public class ControladorPrincipal implements Initializable {
 
     // CLASES Y OBJETOS DE LA LOGICA
     private ServicePalabras servicePalabras = new ServicePalabras();
+    private Juego juegoPrincipal = new Juego();
 
 
 
@@ -114,6 +116,7 @@ public class ControladorPrincipal implements Initializable {
                 controladorPantallaJugar.setBorderPane(this);
             }
             pantallaPrincipal.setCenter(pantallaJugarAnchorPane);
+
         } catch (IOException e) {
             System.out.println("ERROR CARGANDO JUGAR");
         }
@@ -151,5 +154,13 @@ public class ControladorPrincipal implements Initializable {
             System.out.println("No se pudo añadir la palabra");
         }
 
+    }
+
+    public void jugarPartidaRapida(){
+        String palabra = servicePalabras.devolverPalabraAleatoria();
+        char[] incognita = palabra.toCharArray();
+
+
+        controladorPantallaJugar.jugarPartidaRapida(palabra, 0, incognita, "");
     }
 }

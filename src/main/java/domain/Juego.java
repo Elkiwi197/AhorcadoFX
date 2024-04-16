@@ -87,7 +87,7 @@ public class Juego {
     }
 
 
-    private void jugarPartidaGuardada() throws NullPointerException {
+    public void jugarPartidaGuardada() throws NullPointerException {
         FileInputStream fileInputStream = null;
         ObjectInputStream objectInputStream = null;
         DataInputStream dataInputStream = null;
@@ -159,7 +159,7 @@ public class Juego {
         jugarPartida(palabra, fallos, incognita.toCharArray(), letrasUsadas);
     }
 
-    private void guardarPartida(String palabra, String categoria, String incognita, int fallos, String letrasUsadas) {
+    public void guardarPartida(String palabra, String categoria, String incognita, int fallos, String letrasUsadas) {
         FileOutputStream fileOutputStream = null;
         ObjectOutputStream objectOutputStream = null;
         DataOutputStream dataOutputStream = null;
@@ -230,7 +230,7 @@ public class Juego {
     }
 
 
-    private void jugarPartida(String palabra, int fallos, char[] incognita, String letrasUsadas) {
+    public void jugarPartida(String palabra, int fallos, char[] incognita, String letrasUsadas) {
         Scanner scanner = new Scanner(System.in);
         String entrada = "";
         boolean fallo;

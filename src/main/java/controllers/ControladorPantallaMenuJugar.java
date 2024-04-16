@@ -24,6 +24,7 @@ public class ControladorPantallaMenuJugar {
 
     public void jugarPartidaRapida(ActionEvent actionEvent) {
         borderPane.cargarJugar();
+        borderPane.jugarPartidaRapida();
 
     }
 
